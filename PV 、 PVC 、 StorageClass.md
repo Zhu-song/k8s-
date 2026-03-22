@@ -48,38 +48,38 @@ kubectl get pvc
 kubectl get sc
 ```
 # 七、PV/PVC 高频面试 12 题（精简答案）
-**1.PV 和 PVC 是什么？**
+## **1.PV 和 PVC 是什么？**
 -  PV：集群的存储卷
 - PVC：Pod对存储的申请
-**2.为什么要用PV/PVC？**
+## **2.为什么要用PV/PVC？**
 - 让应用不关心底层存储
 - 解偶：应用只管要用多少，运维管怎么存
-**3.PVC 状态一直 Pending 为什么？**
+## **3.PVC 状态一直 Pending 为什么？**
 - 没有匹配的 PV
 - StorageClass 不对
 - 存储插件 / 磁盘有问题
-**4.PV 和 PVC 是 Namespace 资源吗？**
+## **4.PV 和 PVC 是 Namespace 资源吗？**
 - **PV 是集群级别（不属于任何 ns）**
 - **PVC 是命名空间级别**
-**5.PV 三种回收策略？**
+## **5.PV 三种回收策略？**
 Retain（保留）、Recycle（清空）、Delete（删除）
-**6.StorageClass 作用？**
+## **6.StorageClass 作用？**
 **动态创建 PV**，不用手动管理
-**7.什么是静态供给、动态供给？**
+## **7.什么是静态供给、动态供给？**
 - 静态：运维**提前建好 PV**
 - 动态：通过 StorageClass **自动创建 PV**
-**8.PV 访问模式 3 种？**
+## **8.PV 访问模式 3 种？**
 RWO、ROX、RWX
-**9.PVC 删除后数据会丢吗？**
+## **9.PVC 删除后数据会丢吗？**
 看 PV 回收策略：
 
 - Retain：**不丢**
 - Delete：**丢**
-**10.Pod 如何使用存储？**
+## **10.Pod 如何使用存储？**
 Pod 挂载 PVC → PVC 绑定 PV → 真正使用存储
-**11.PV 能被多个 PVC 绑定吗？**
+## **11.PV 能被多个 PVC 绑定吗？**
 不能，**一对一绑定**
-**12.Deployment 能用 PVC 吗？**
+## **12.Deployment 能用 PVC 吗？**
 可以，但必须是**RWX 或副本 = 1**
 
 多副本同时读写要用 **RWX 存储**
