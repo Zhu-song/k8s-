@@ -54,6 +54,11 @@ Master（大脑）+Node（干活）
 ### 3.容器运行时（CRI）
 - 真正跑容器的：contained、Docker等
 - 拉镜像、启停容器
+
+# K8s命令
+- [K8s 学习笔记 & 命令速查表]（https://github.com/Zhu-song/k8s-/blob/main/k8s%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4.md）
+
+
 # Pod从敲命令到跑起来，完整流程是什么？
 ## 1.kubectl提交创建Pod请求→kube-apiserver
 ## 2.apiserver校验、认证，把Pod信息存入etcd
