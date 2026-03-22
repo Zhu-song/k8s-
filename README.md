@@ -56,14 +56,14 @@ Master（大脑）+Node（干活）
 - 拉镜像、启停容器
 
 # K8s命令
-- [K8s 学习笔记 & 命令速查表]（https://github.com/Zhu-song/k8s-/blob/main/k8s%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4.md）
+- [K8s基本命令](k8s基本命令)
 
 
 # Pod从敲命令到跑起来，完整流程是什么？
-## 1.kubectl提交创建Pod请求→kube-apiserver
-## 2.apiserver校验、认证，把Pod信息存入etcd
-## 3.kube-scheduler发现有未调度的Pod计算合适节点，把节点名写入etcd
-## 4.对应节点的kubelet观察到“有Pod分配给我了”
-## 5.kubelet让容器运行时拉镜像、创建容器
-## 6.kubelet汇报给apiserver
-## 7.Pod运行成功
+- **1.kubectl提交创建Pod请求→kube-apiserver**
+- **2.apiserver校验、认证，把Pod信息存入etcd**
+- **3.kube-scheduler发现有未调度的Pod计算合适节点，把节点名写入etcd**
+- **4.对应节点的kubelet观察到“有Pod分配给我了”**
+- **5.kubelet让容器运行时拉镜像、创建容器**
+- **6.kubelet汇报给apiserver**
+- **7.Pod运行成功**
