@@ -43,35 +43,35 @@
 3.DownwardAPI
 4.ServiceAccoutToken
 # 六、面试高频（12题）
-**1.ConfigMAp作用？**
+## **1.ConfigMAp作用？**
 存储**非敏感配置**，实现配置与镜像解偶。
-**2.Secret作用？**
+## **2.Secret作用？**
 存储**敏感信息**（密码、token、证书）。
-**3.Secret安全吗？**
+## **3.Secret安全吗？**
 Base64编码，不是加密，只是编码。
 真正安全要开**加密Etcd**或外部密钥管理。
-**4.ConfigMap/Secret怎么用？**
+## **4.ConfigMap/Secret怎么用？**
 - 环境变量
 - 挂载为文件
-**5.ConfigMap更新后，容器会自动更新吗？**
+## **5.ConfigMap更新后，容器会自动更新吗？**
 挂载为文件：**会自动更新。**
 环境变量：**不会**，必须重启pod。
-**6.DownwardAPI干什么？**
+## **6.DownwardAPI干什么？**
 把**pod自身信息**（IP、名称、标签、注解）暴露给容器。
-**7.ServiceAccounToken干什么？**
+## **7.ServiceAccounToken干什么？**
 给容器里的程序**访问 K8s API**权限。
-**8.环境变量和挂载配置文件的区别？**
+## **8.环境变量和挂载配置文件的区别？**
 - 环境变量：简单参数，**不热更新**
 - 挂载文件：配置文件，**支持热更新**
-**9.热更新配置怎么做？**
+## **9.热更新配置怎么做？**
 ConfigMap/Secret以**文件形式挂载**，应用支持热加载。
-**10.Secret和证书怎么用？**
+## **10.Secret和证书怎么用？**
 创建 Secret 存放证书 → 挂载到容器 → 程序使用。
-**11.为什么不把配置写到镜像里面？**
+## **11.为什么不把配置写到镜像里面？**
 - 不方便修改
 - 不同环境要打不镜像
 - 违反**镜像不可变原则**
-12.Project Volume类型
+## 12.Project Volume类型
 - ConfigMap
 - Secret
 - DownwardAPI
